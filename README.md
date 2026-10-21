@@ -23,7 +23,7 @@ The model is a **star schema**: `sales` is the fact table, `products` and `store
 | Tool | Work |
 |---|---|
 | **SQL** (SQLite + Python) | `JOIN`s across 3 tables, `GROUP BY` / `HAVING`, date functions (`strftime`), CTEs, window functions (`ROW_NUMBER() OVER (PARTITION BY ...)`) for "top N per group" questions |
-| **Power BI** | Data model with relationships, KPI cards, line / column / bar charts, slicer, cross-filtering, DAX measure (`DIVIDE`) |
+| **Power BI** | Data model with relationships, KPI cards, line / column / bar charts, slicer, cross-filtering, DAX measure (`DIVIDE`) | , DAX measures with CALCULATE, ALL, DIVIDE, date table and month-over-month growth (PREVIOUSMONTH)
 | **Excel** | `XLOOKUP`, `IF`, `COUNTIF`, `SUMIFS`, `TEXT` for dates, PivotTable and PivotChart |
 
 ## Key findings
@@ -49,7 +49,8 @@ From September, the shops should order **fewer watermelons and peaches** and **m
 | `fruit_shop.xlsx` | Data source for Power BI |
 | `fruit_shop_excel.xlsx` | Excel workbook with formulas, PivotTable and PivotChart |
 | `fruit_shop_dashboard.pbix` | Power BI dashboard |
+| `analysis.ipynb` | pandas analysis: merge, groupby, pivot_table, dates, charts |
 
 ## Tools
 
-Python · SQLite · SQL · Power BI · DAX · Excel
+Python · SQLite · SQL · Power BI · DAX · Excel · Pandas · Matplotlib

@@ -4,14 +4,6 @@ from pathlib import Path
 conn = sqlite3.connect(Path(__file__).parent/"fruit_shop.db")
 
 
-
-query = """
-SELECT * FROM sales
-"""
-
-for row in conn.execute(query):
-    print(row)  
-
 print("-----Excercise 1")
 for red in conn.execute("""
                         SELECT products.name, SUM(sales.quantity_kg) AS total_kg
